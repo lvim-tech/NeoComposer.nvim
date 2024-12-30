@@ -21,13 +21,11 @@ function store.save_macros_to_database()
 
   store.db:with_open(function()
     for i, macro in ipairs(macros) do
-      if
-        store.db:select("macros", {
-          where = {
-            number = i,
-          },
-        })[1]
-      then
+      if store.db:select("macros", {
+        where = {
+          number = i,
+        },
+      })[1] then
         store.db:update("macros", {
           where = {
             number = i,
