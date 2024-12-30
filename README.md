@@ -116,10 +116,10 @@ emits `User` autocmd events to notify the user of status changes.
 
 ## 🐢 Delay Timer
 
-For complex macros over large counts, you can toggle a delay between macro playback using the `ToggleDelay` command:
+For complex macros over large counts, you can toggle a delay between macro playback using the `NeoComposerToggleDelay` command:
 
 ```vim
-:ToggleDelay
+:NeoComposerToggleDelay
 ```
 
 ![demo](https://raw.githubusercontent.com/ecthelionvi/Images/main/Delay.gif)
@@ -151,16 +151,16 @@ NeoComposer designates macro number `1` as `queued` for quick access and executi
 | `toggle_record`     | `q`     | Starts recording, press again to end recording                                        |
 | `yank_macro`        | `yq`    | Yank the currently selected macro, in human readable format into the default register |
 
-Edit your macros in a more comprehensive way with the `EditMacros` command:
+Edit your macros in a more comprehensive way with the `NeoComposerEditMacros` command:
 
 ```vim
-:EditMacros
+:NeoComposerEditMacros
 ```
 
-Clear the list of macros with the `ClearNeoComposer` command:
+Clear the list of macros with the `NeoComposerClear` command:
 
 ```vim
-:ClearNeoComposer
+:NeoComposerClear
 ```
 
 ## 📦 Installation

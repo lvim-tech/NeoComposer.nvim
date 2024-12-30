@@ -5,9 +5,9 @@ local user_cmd = vim.api.nvim_create_user_command
 local config = require("NeoComposer.config")
 
 function maps.setup()
-  user_cmd("EditMacros", "lua require ('NeoComposer.ui').edit_macros()", {})
-  user_cmd("ToggleDelay", "lua require ('NeoComposer.macro').toggle_delay()", {})
-  user_cmd("ClearNeoComposer", "lua require ('NeoComposer.store').clear_macros()", {})
+  user_cmd("NeoComposerEditMacros", "lua require ('NeoComposer.ui').edit_macros()", {})
+  user_cmd("NeoComposerToggleDelay", "lua require ('NeoComposer.macro').toggle_delay()", {})
+  user_cmd("NeoComposerClear", "lua require ('NeoComposer.store').clear_macros()", {})
 
   if config.keymaps.cycle_next then
     map("n", config.keymaps.cycle_next, "<cmd>lua require('NeoComposer.ui').cycle_next()<cr>", opts)
