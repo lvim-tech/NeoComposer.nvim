@@ -220,7 +220,9 @@ function ui.toggle_macro_menu()
 
   local contents = {}
   for i, m in ipairs(state.get_macros()) do
-    contents[i] = m.content
+    for line in m.content:gmatch("[^\n]+") do
+      table.insert(contents, line)
+    end
   end
 
   local function map(mode, lhs, rhs)
@@ -278,7 +280,9 @@ function ui.edit_macros()
   local macros = state.get_macros()
   local contents = {}
   for i, m in ipairs(macros) do
-    contents[i] = m.content
+    for line in m.content:gmatch("[^\n]+") do
+      table.insert(contents, line)
+    end
   end
   api.nvim_buf_set_lines(bufnr, 0, -1, false, contents)
 

@@ -147,8 +147,8 @@ local function start_pos_in_selection()
   local end_ = vim.fn.getpos(".")
   local start_row = start[2]
   local end_row = end_[2]
-  local start_col = start[3] - 1
-  local end_col = end_[3] - 1
+  local start_col = start[3]
+  local end_col = end_[3]
 
   if end_row < start_row then
     start_row, end_row = end_row, start_row
